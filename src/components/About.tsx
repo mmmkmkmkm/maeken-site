@@ -48,7 +48,7 @@ export function About() {
               className="w-full h-full object-cover"
               style={{
                 imageRendering: revealed ? "auto" : "pixelated",
-                objectPosition: revealed ? "center" : "center 10%",
+                objectPosition: "center",
               }}
             />
           </button>

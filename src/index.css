@@ -16,12 +16,18 @@
 }
 
 /* ---------- Self-hosted pixel fonts (fallback chain covers missing files) ---------- */
+/* PKMN only has glyphs for A-Z, 0-9, kana, and JP punctuation — lowercase
+   Latin (g/i/k/l/m/p aside) is empty in the source font. iOS Safari renders
+   empty glyphs as blank instead of falling back, silently eating letters
+   like "Goodbye" -> "G". unicode-range keeps PKMN out of that range so the
+   browser's normal font-fallback picks up DotGothic16 for lowercase Latin. */
 @font-face {
   font-family: "PKMN";
   src: url("./assets/fonts/pkmn_r.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0030-0039, U+0041-005A, U+3000-30FF, U+FF00-FFEF;
 }
 
 @font-face {
@@ -30,6 +36,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0030-0039, U+0041-005A, U+3000-30FF, U+FF00-FFEF;
 }
 
 :root {
