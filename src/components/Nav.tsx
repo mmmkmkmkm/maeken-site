@@ -1,6 +1,7 @@
 const NAV_LINKS = [
   { href: "#works", label: "WORKS" },
   { href: "#about", label: "ABOUT" },
+  { href: "#gallery", label: "GALLERY" },
   { href: "#services", label: "SERVICES" },
   { href: "#contact", label: "CONTACT" },
 ];
@@ -15,10 +16,14 @@ export function Nav() {
         >
           MAEKEN
         </a>
-        <nav aria-label="メインナビゲーション" className="min-w-0">
-          <ul className="flex items-center gap-3 sm:gap-6 md:gap-8 text-[10px] sm:text-xs md:text-sm tracking-[0.05em] text-[var(--color-ink)] font-[family-name:var(--font-pixel)]">
+        <nav
+          aria-label="メインナビゲーション"
+          className="min-w-0 overflow-x-auto"
+          style={{ scrollbarWidth: "none" }}
+        >
+          <ul className="flex items-center gap-3 sm:gap-6 md:gap-8 text-[10px] sm:text-xs md:text-sm tracking-[0.05em] text-[var(--color-ink)] font-[family-name:var(--font-pixel)] whitespace-nowrap">
             {NAV_LINKS.map((link) => (
-              <li key={link.href}>
+              <li key={link.href} className="shrink-0">
                 <a href={link.href} className="dot-menu-item inline-block py-1 hover:text-[var(--color-accent)] transition-colors">
                   {link.label}
                 </a>

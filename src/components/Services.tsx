@@ -40,7 +40,7 @@ export function Services() {
       <div className="mx-auto max-w-[1400px]">
         <div className="reveal mb-14 md:mb-20">
           <p className="text-xs tracking-[0.2em] text-[var(--color-accent)] mb-3 font-[family-name:var(--font-pixel)] flex items-center gap-2">
-            03
+            04
             <PixelDecor kind="star" color="var(--color-corgi)" className="w-3.5 h-3.5" />
           </p>
           <TypewriterHeading

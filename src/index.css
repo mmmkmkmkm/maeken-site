@@ -34,6 +34,14 @@ html {
   }
 }
 
+/* CONTINUE? section has a dark background — the default ink-colored cursor
+   disappears against it, so swap to a cream cursor there. Links/buttons keep
+   the red hover cursor (already visible on dark), only the default arrow
+   needs the swap. */
+#contact {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><g fill='%23f5f1e6'><rect x='0' y='0' width='2' height='2'/><rect x='0' y='2' width='2' height='2'/><rect x='2' y='2' width='2' height='2'/><rect x='0' y='4' width='2' height='2'/><rect x='2' y='4' width='2' height='2'/><rect x='4' y='4' width='2' height='2'/><rect x='0' y='6' width='2' height='2'/><rect x='2' y='6' width='2' height='2'/><rect x='4' y='6' width='2' height='2'/><rect x='6' y='6' width='2' height='2'/><rect x='0' y='8' width='2' height='2'/><rect x='2' y='8' width='2' height='2'/><rect x='4' y='9' width='2' height='2'/></g></svg>") 0 0, auto;
+}
+
 body {
   margin: 0;
   background-color: var(--color-bg);

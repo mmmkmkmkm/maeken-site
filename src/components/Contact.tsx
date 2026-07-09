@@ -15,7 +15,7 @@ export function Contact() {
     >
       <div className="mx-auto max-w-[1400px] text-center">
         <p className="reveal text-xs tracking-[0.2em] text-[var(--color-accent)] mb-6 font-[family-name:var(--font-pixel)]">
-          04
+          05
         </p>
         <TypewriterHeading
           id="contact-heading"
