@@ -46,7 +46,10 @@ export function About() {
               src={revealed ? "./assets/顔写真1.jpg" : "./assets/pixel/portrait_pixel.png"}
               alt="前田健太朗のポートレート"
               className="w-full h-full object-cover"
-              style={{ imageRendering: revealed ? "auto" : "pixelated" }}
+              style={{
+                imageRendering: revealed ? "auto" : "pixelated",
+                objectPosition: revealed ? "center" : "center 10%",
+              }}
             />
           </button>
 
