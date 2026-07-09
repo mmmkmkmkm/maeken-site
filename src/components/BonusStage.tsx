@@ -47,7 +47,7 @@ function CrtTv({
             aria-hidden="true"
             className="absolute inset-0 pointer-events-none crt-scanlines"
           />
-          <p className="absolute bottom-1.5 left-0 right-0 text-center font-[family-name:var(--font-pixel)] text-[8px] sm:text-[9px] tracking-[0.15em] text-[var(--color-bg)]">
+          <p className="absolute bottom-1.5 left-0 right-0 text-center font-[family-name:var(--font-pixel)] text-[8px] sm:text-[9px] tracking-[0.15em] text-[var(--color-accent)]">
             COMING SOON: CORGI
           </p>
         </div>
