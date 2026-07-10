@@ -22,30 +22,36 @@ export function Gallery() {
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        <div
+          className="flex gap-4 md:gap-5 overflow-x-auto pb-3 -mx-6 px-6 md:-mx-10 md:px-10"
+          style={{ scrollbarWidth: "thin" }}
+        >
           {galleryPosts.map((post) => (
             <article
               key={post.id}
-              className="reveal pixel-border bg-[var(--color-bg-alt)] flex flex-col"
+              className="reveal pixel-border bg-[var(--color-bg-alt)] flex flex-col shrink-0 w-56 md:w-64"
             >
               {post.type === "photo" && post.image && (
-                <div className="border-b-4 border-[var(--color-ink)] bg-black aspect-square overflow-hidden">
+                <div className="border-b-4 border-[var(--color-ink)] bg-[var(--color-bg-alt)] h-56 md:h-60 flex items-center justify-center overflow-hidden">
                   <img
                     src={post.image}
                     alt=""
-                    className="w-full h-full object-cover"
-                    style={{ imageRendering: "pixelated" }}
+                    className="max-w-full max-h-full object-contain"
                   />
                 </div>
               )}
-              <div className="p-4 flex flex-col gap-2">
-                <p className="text-[10px] tracking-[0.2em] text-[var(--color-accent)] font-[family-name:var(--font-pixel)]">
-                  {post.date}
-                </p>
-                <p className="text-xs md:text-sm leading-relaxed text-[var(--color-ink)]">
-                  {post.caption}
-                </p>
-              </div>
+              {post.caption && (
+                <div className="p-4 flex flex-col gap-2">
+                  {post.date && (
+                    <p className="text-[10px] tracking-[0.2em] text-[var(--color-accent)] font-[family-name:var(--font-pixel)]">
+                      {post.date}
+                    </p>
+                  )}
+                  <p className="text-xs md:text-sm leading-relaxed text-[var(--color-ink)]">
+                    {post.caption}
+                  </p>
+                </div>
+              )}
             </article>
           ))}
         </div>
