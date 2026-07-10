@@ -4,27 +4,23 @@ import { PixelDecor } from "./PixelDecor";
 type Service = {
   num: string;
   title: string;
-  lead?: string;
   desc: string;
   subject: string;
   cta: string;
-  featured?: boolean;
 };
 
 const services: Service[] = [
   {
     num: "01",
     title: "作曲・編曲 / COMPOSE・ARRANGE",
-    lead: "看板メニュー",
     desc: "ホーンセクションや生楽器を取り入れたバンドアレンジから、打ち込み系トラックまで。デモ・ラフからの立ち上げにも対応します。J-POPを中心に、楽曲の芯となるラインづくりが得意です。",
     subject: "作曲・編曲のご依頼",
     cta: "依頼する",
-    featured: true,
   },
   {
     num: "02",
     title: "ベース録音 / RECORDING SUPPORT",
-    desc: "生ベースのレコーディングを承ります。Atelier Z Beta5/32 と Antelope Zen Go による自宅録音環境で、楽曲に寄り添うラインを。指弾き・ピック・スラップに対応。",
+    desc: "生ベースのレコーディングを承ります。Atelier Z Beta5/32 と Antelope Zen Go による自宅録音環境で、指弾き・ピック・スラップに対応。",
     subject: "ベース録音のご依頼",
     cta: "依頼する",
   },
@@ -54,41 +50,20 @@ export function Services() {
           {services.map((s) => (
             <article
               key={s.num}
-              className={`reveal pixel-border flex flex-col p-6 md:p-8 m-2 ${
-                s.featured ? "bg-[var(--color-accent)]" : "bg-[var(--color-bg)]"
-              }`}
+              className="group reveal pixel-border flex flex-col p-6 md:p-8 m-2 bg-[var(--color-bg)] transition-colors duration-150 hover:bg-[var(--color-accent)]"
             >
-              <p
-                className={`text-xs tracking-[0.15em] mb-4 font-[family-name:var(--font-pixel)] ${
-                  s.featured ? "text-[var(--color-bg)]" : "text-[var(--color-ink)]/60"
-                }`}
-              >
+              <p className="text-xs tracking-[0.15em] mb-4 font-[family-name:var(--font-pixel)] text-[var(--color-ink)]/60 transition-colors duration-150 group-hover:text-[var(--color-bg)]">
                 ITEM {s.num}
               </p>
-              <h3
-                className={`font-[family-name:var(--font-pixel)] text-lg md:text-xl mb-1 ${
-                  s.featured ? "text-[var(--color-bg)]" : "text-[var(--color-ink)]"
-                }`}
-              >
+              <h3 className="font-[family-name:var(--font-pixel)] text-lg md:text-xl mb-1 text-[var(--color-ink)] transition-colors duration-150 group-hover:text-[var(--color-bg)]">
                 {s.title}
               </h3>
-              {s.lead && (
-                <p className="text-xs tracking-[0.1em] mb-3 text-[var(--color-bg)] font-[family-name:var(--font-pixel)]">
-                  ★ {s.lead}
-                </p>
-              )}
-              <p
-                className={`text-sm md:text-base leading-relaxed flex-1 mb-6 ${
-                  s.featured ? "text-[var(--color-bg)]/90" : "text-[var(--color-ink)]/80"
-                }`}
-              >
+              <p className="text-sm md:text-base leading-relaxed flex-1 mb-6 text-[var(--color-ink)]/80 transition-colors duration-150 group-hover:text-[var(--color-bg)]/90">
                 {s.desc}
               </p>
               <a
                 href={`mailto:sounandesuyo21@gmail.com?subject=${encodeURIComponent(s.subject)}`}
-                className={`pixel-btn text-xs md:text-sm w-fit ${
-                  s.featured ? "bg-[var(--color-bg)]" : ""
-                }`}
+                className="pixel-btn text-xs md:text-sm w-fit"
               >
                 ▶ {s.cta}
               </a>
