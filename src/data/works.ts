@@ -32,6 +32,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "1ULOM82c5GfszhyvAG5ASP", kind: "album" },
         youtubeId: "WuacZJTg9o0",
         appleMusic: "https://music.apple.com/jp/album/_/1809060290?i=1809060297",
+        audioSrc: "./assets/audio/Goodbye.mp3",
         isNew: true,
       },
       {
@@ -41,6 +42,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "3mPqNsQEmNbvAQnTVsfdHB", kind: "track" },
         youtubeId: "VVk1x1MAwNU",
         appleMusic: "https://music.apple.com/jp/album/hug/1778248163?i=1778248183",
+        audioSrc: "./assets/audio/Hug.mp3",
       },
       {
         id: "geki",
@@ -49,6 +51,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "16EzQfCGmqPJprRU2n97WL", kind: "track" },
         youtubeId: "1VQzz39UxTo",
         appleMusic: "https://music.apple.com/jp/album/%E5%8A%87/1657986922?i=1657986923",
+        audioSrc: "./assets/audio/劇.mp3",
       },
       {
         id: "toriko",
@@ -57,6 +60,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "42cAWzrmV9t8G0A6OPrUuw", kind: "track" },
         youtubeId: "hxvVd4QRvak",
         appleMusic: "https://music.apple.com/jp/album/%E8%99%9C/1620290764?i=1620291126",
+        audioSrc: "./assets/audio/虜.mp3",
       },
       {
         id: "corgi",
@@ -120,6 +124,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "1ULOM82c5GfszhyvAG5ASP", kind: "album" },
         youtubeId: "WuacZJTg9o0",
         appleMusic: "https://music.apple.com/jp/album/_/1809060290?i=1809060297",
+        audioSrc: "./assets/audio/Goodbye.mp3",
       },
       {
         id: "hug-bass",
@@ -128,6 +133,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "3mPqNsQEmNbvAQnTVsfdHB", kind: "track" },
         youtubeId: "VVk1x1MAwNU",
         appleMusic: "https://music.apple.com/jp/album/hug/1778248163?i=1778248183",
+        audioSrc: "./assets/audio/Hug.mp3",
       },
     ],
   },
@@ -144,6 +150,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "16EzQfCGmqPJprRU2n97WL", kind: "track" },
         youtubeId: "1VQzz39UxTo",
         appleMusic: "https://music.apple.com/jp/album/%E5%8A%87/1657986922?i=1657986923",
+        audioSrc: "./assets/audio/劇.mp3",
       },
       {
         id: "toriko-track",
@@ -152,6 +159,7 @@ export const workGroups: WorkGroup[] = [
         spotify: { id: "42cAWzrmV9t8G0A6OPrUuw", kind: "track" },
         youtubeId: "hxvVd4QRvak",
         appleMusic: "https://music.apple.com/jp/album/%E8%99%9C/1620290764?i=1620291126",
+        audioSrc: "./assets/audio/虜.mp3",
       },
     ],
   },

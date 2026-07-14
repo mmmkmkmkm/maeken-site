@@ -84,7 +84,13 @@ export function WorkCardItem({ card }: { card: WorkCard }) {
         </div>
       )}
 
-      {card.audioSrc && <CorgiPlayer src={card.audioSrc} />}
+      {card.audioSrc && (
+        <CorgiPlayer
+          src={card.audioSrc}
+          cartridgeLabel={`${card.title.toUpperCase()} CARTRIDGE`}
+          tag={card.comingSoon ? "PREVIEW (〜1:08)" : "FULL TRACK"}
+        />
+      )}
     </article>
   );
 }

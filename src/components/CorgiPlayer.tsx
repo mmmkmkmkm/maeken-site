@@ -10,7 +10,15 @@ function formatTime(sec: number) {
   return `${m}:${s}`;
 }
 
-export function CorgiPlayer({ src }: { src: string }) {
+export function CorgiPlayer({
+  src,
+  cartridgeLabel = "CORGI CARTRIDGE",
+  tag = "PREVIEW (〜1:08)",
+}: {
+  src: string;
+  cartridgeLabel?: string;
+  tag?: string;
+}) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -76,10 +84,10 @@ export function CorgiPlayer({ src }: { src: string }) {
   return (
     <div className="mt-4 pixel-border bg-[var(--color-corgi)] p-3 m-2">
       <audio ref={audioRef} src={src} preload="metadata" />
-      <p className="text-[9px] tracking-[0.2em] text-[var(--color-bg)] font-[family-name:var(--font-pixel)] mb-2 flex items-center justify-between gap-2 flex-wrap">
-        <span>CORGI CARTRIDGE</span>
-        <span className="text-[var(--color-ink)] bg-[var(--color-bg)] px-1.5 py-0.5">
-          PREVIEW (〜1:08)
+      <p className="text-[9px] tracking-[0.2em] text-[var(--color-bg)] mb-2 flex items-center justify-between gap-2 flex-wrap">
+        <span className="font-[family-name:var(--font-body)]">{cartridgeLabel}</span>
+        <span className="text-[var(--color-ink)] bg-[var(--color-bg)] px-1.5 py-0.5 font-[family-name:var(--font-pixel)]">
+          {tag}
         </span>
       </p>
       <div className="bg-[var(--color-bg)] border-4 border-[var(--color-ink)] px-3 py-2.5 flex items-center gap-3">
