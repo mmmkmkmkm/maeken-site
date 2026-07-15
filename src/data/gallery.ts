@@ -8,6 +8,13 @@ export type GalleryPost = {
 
 export const galleryPosts: GalleryPost[] = [
   {
+    id: "log-2026-07-15",
+    type: "text",
+    date: "2026.07",
+    caption:
+      "今日はbialystocksの武道館公演へ。演出が本当に勉強になった。自由に踊れるライブを作るには、お客さんを巻き込むアーティスト力がいるんだと思った。",
+  },
+  {
     id: "live-bass-1",
     type: "photo",
     image: "./assets/gallery/live-bass-1.jpg",
