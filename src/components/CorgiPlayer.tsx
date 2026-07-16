@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
+import { claimAudio } from "../hooks/useAudioManager";
 
 function formatTime(sec: number) {
   if (!Number.isFinite(sec)) return "0:00";
@@ -30,26 +31,31 @@ export function CorgiPlayer({
     if (!audio) return;
     const onTime = () => setCurrent(audio.currentTime);
     const onLoaded = () => setDuration(audio.duration);
-    const onEnd = () => setIsPlaying(false);
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
     audio.addEventListener("timeupdate", onTime);
     audio.addEventListener("loadedmetadata", onLoaded);
-    audio.addEventListener("ended", onEnd);
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("ended", onPause);
     return () => {
       audio.removeEventListener("timeupdate", onTime);
       audio.removeEventListener("loadedmetadata", onLoaded);
-      audio.removeEventListener("ended", onEnd);
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("ended", onPause);
     };
   }, []);
 
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
-    if (isPlaying) {
-      audio.pause();
-    } else {
+    if (audio.paused) {
+      claimAudio(() => audio.pause());
       audio.play();
+    } else {
+      audio.pause();
     }
-    setIsPlaying(!isPlaying);
   };
 
   const seekTo = (ratio: number) => {

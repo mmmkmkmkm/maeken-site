@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from "react";
+import { claimAudio } from "./useAudioManager";
 
 const AUDIO_SRC = "./assets/audio/Corgi.mp3";
 
@@ -25,6 +26,7 @@ function notify() {
 export function playBgm() {
   const a = getAudio();
   if (!a) return;
+  claimAudio(pauseBgm);
   a.play()
     .then(() => {
       playing = true;

@@ -23,7 +23,7 @@ export function Gallery() {
         </div>
 
         <div
-          className="flex gap-4 md:gap-5 overflow-x-auto pb-3 -mx-6 px-6 md:-mx-10 md:px-10"
+          className="flex gap-4 md:gap-5 overflow-x-auto pt-3 pb-3 -mx-6 px-6 md:-mx-10 md:px-10"
           style={{ scrollbarWidth: "thin" }}
         >
           {galleryPosts.map((post) => (
