@@ -47,7 +47,7 @@ export const workGroups: WorkGroup[] = [
       {
         id: "geki",
         title: "劇",
-        meta: "CoCoKoKo (Maeken & Calen) · 2022 · 作編曲/トラック/mix",
+        meta: "CoCoKoKo (Maeken & Calen) · 2022 · ボーカルと共作/作編曲/トラック/mix",
         spotify: { id: "16EzQfCGmqPJprRU2n97WL", kind: "track" },
         youtubeId: "1VQzz39UxTo",
         appleMusic: "https://music.apple.com/jp/album/%E5%8A%87/1657986922?i=1657986923",
@@ -56,7 +56,7 @@ export const workGroups: WorkGroup[] = [
       {
         id: "toriko",
         title: "虜",
-        meta: "CoCoKoKo · 2022 · 作編曲/トラック/mix",
+        meta: "CoCoKoKo · 2022 · ボーカルと共作/作編曲/トラック/mix",
         spotify: { id: "42cAWzrmV9t8G0A6OPrUuw", kind: "track" },
         youtubeId: "hxvVd4QRvak",
         appleMusic: "https://music.apple.com/jp/album/%E8%99%9C/1620290764?i=1620291126",
