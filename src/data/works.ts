@@ -26,6 +26,14 @@ export const workGroups: WorkGroup[] = [
     enLabel: "Composition & Arrangement",
     cards: [
       {
+        id: "corgi",
+        title: "Corgi",
+        meta: "Maeken · 作曲/編曲/作詞/ベース",
+        comingSoon: true,
+        audioSrc: "./assets/audio/Corgi.mp3",
+        isNew: true,
+      },
+      {
         id: "goodbye",
         title: "Goodbye",
         meta: "JAG · 2025 · 作曲/編曲/ベース",
@@ -33,7 +41,6 @@ export const workGroups: WorkGroup[] = [
         youtubeId: "WuacZJTg9o0",
         appleMusic: "https://music.apple.com/jp/album/_/1809060290?i=1809060297",
         audioSrc: "./assets/audio/Goodbye.mp3",
-        isNew: true,
       },
       {
         id: "hug",
@@ -61,13 +68,6 @@ export const workGroups: WorkGroup[] = [
         youtubeId: "hxvVd4QRvak",
         appleMusic: "https://music.apple.com/jp/album/%E8%99%9C/1620290764?i=1620291126",
         audioSrc: "./assets/audio/虜.mp3",
-      },
-      {
-        id: "corgi",
-        title: "Corgi",
-        meta: "Maeken · Coming soon",
-        comingSoon: true,
-        audioSrc: "./assets/audio/Corgi.mp3",
       },
     ],
   },
