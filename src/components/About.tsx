@@ -2,11 +2,13 @@ import { useState } from "react";
 import { TypewriterHeading } from "./TypewriterHeading";
 import { PixelDecor } from "./PixelDecor";
 
-const stats = [
+const stats: { label: string; value: string; wide?: boolean }[] = [
   { label: "NAME", value: "前田健太朗" },
   { label: "CLASS", value: "Bassist → Composer" },
   { label: "LV", value: "27" },
   { label: "SKILL", value: "作曲・編曲・ベース・Logic Pro" },
+  // 事務所は一段目立たせたいので、2カラムいっぱいに広げる
+  { label: "AGENCY", value: "スマイル音楽出版 預かり作家", wide: true },
 ];
 
 export function About() {
@@ -56,7 +58,7 @@ export function About() {
           <div className="max-w-[680px]">
             <dl className="reveal grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-8 pixel-border bg-[var(--color-bg)] p-5 md:p-6 m-2">
               {stats.map((s) => (
-                <div key={s.label}>
+                <div key={s.label} className={s.wide ? "sm:col-span-2 sm:border-t-2 sm:border-dotted sm:border-[var(--color-ink)]/30 sm:pt-4" : undefined}>
                   <dt className="text-[10px] tracking-[0.2em] text-[var(--color-accent)] mb-1 font-[family-name:var(--font-pixel)]">
                     {s.label}
                   </dt>
@@ -73,7 +75,9 @@ export function About() {
                 <strong className="font-bold">
                   作曲・編曲・トラックメイク
                 </strong>
-                に取り組む音楽クリエイターです。吹奏楽・軽音・バンドでの活動を経て19歳から楽曲制作を始め、J-POPを中心に制作を続けています。
+                に取り組む音楽クリエイターです。吹奏楽・軽音・バンドでの活動を経て19歳から楽曲制作を始め、J-POPを中心に制作を続けています。2026年より
+                <strong className="font-bold">スマイル音楽出版</strong>
+                の預かり作家として、レーベル・アーティストへの楽曲提供に取り組んでいます。
               </p>
               <p className="text-sm md:text-base leading-relaxed text-[var(--color-ink)]/80 mb-4">
                 一時はIT企業に就職し、会社員としても本気で仕事に向き合ってきました。しかし2025年に白血病を患ったことをきっかけに、音楽へ専念する決意を固めました。闘病を通して込み上げたのは「本当にやりたいことは音楽だ」という一心。会社を辞め、いま人生をかけて音楽に向き合っています。
