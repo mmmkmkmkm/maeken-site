@@ -8,6 +8,14 @@ export type GalleryPost = {
 
 export const galleryPosts: GalleryPost[] = [
   {
+    id: "log-2026-09-hospital",
+    type: "photo",
+    date: "2026.09",
+    image: "./assets/gallery/hospital-guitar.jpg",
+    caption:
+      "またしても入院。今回はウイルス性髄膜炎です。感染するので個室に隔離されているんだけど、正直ちょっと嬉しい。誰にも気を遣わずにギターが弾ける。せっかくなので作曲の缶詰だと思って、ここで曲を書きます。",
+  },
+  {
     id: "log-2026-07-15",
     type: "text",
     date: "2026.07",
