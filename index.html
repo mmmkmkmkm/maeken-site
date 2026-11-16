@@ -7,11 +7,32 @@
     <meta name="description" content="Maeken（前田健太朗）の音楽ポートフォリオ。作編曲・トラックメイク・ベース演奏を軸に、J-POPを中心とした楽曲制作を行っています。ベース録音代行・編曲・ミックスのご依頼を受付中。" />
 
     <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="canonical" href="https://mmmkmkmkm.github.io/maeken-site/" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mmmkmkmkm.github.io/maeken-site/" />
+    <meta property="og:site_name" content="Maeken" />
     <meta property="og:title" content="Maeken | 前田健太朗 — Composer / Arranger / Bassist" />
     <meta property="og:description" content="ベースの熱量を、楽曲の芯に。作編曲・トラックメイク・ベース演奏を軸に活動する音楽クリエイター Maeken のポートフォリオ。" />
-    <meta property="og:image" content="./assets/og-art.png" />
+    <meta property="og:image" content="https://mmmkmkmkm.github.io/maeken-site/assets/og-art.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "前田健太朗",
+        "alternateName": ["Maeken", "まえけん", "Maeda Kentaro"],
+        "url": "https://mmmkmkmkm.github.io/maeken-site/",
+        "image": "https://mmmkmkmkm.github.io/maeken-site/assets/og-art.png",
+        "jobTitle": "作曲家・編曲家・ベーシスト",
+        "affiliation": { "@type": "Organization", "name": "スマイル音楽出版" },
+        "sameAs": [
+          "https://youtube.com/@maeken5747",
+          "https://www.instagram.com/maeda_kentarooh",
+          "https://lnkpie.com/@maeken"
+        ]
+      }
+    </script>
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +43,32 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <!-- 検索エンジン向けの静的な中身。JSが動くとReactがこの中を置き換える -->
+    <div id="root">
+      <main style="max-width:720px;margin:0 auto;padding:24px 16px;font-family:sans-serif">
+        <h1>Maeken（前田健太朗）— 作曲家・編曲家・ベーシスト</h1>
+        <p>作編曲・トラックメイク・ベース演奏を軸に、J-POPを中心とした楽曲制作を行う音楽クリエイター。スマイル音楽出版 預かり作家。ベース録音代行・編曲・ミックスのご依頼を受付中。</p>
+        <h2>作編曲</h2>
+        <ul>
+          <li>Corgi（Maeken）作曲・編曲・作詞・ベース</li>
+          <li>Goodbye（JAG, 2025）作曲・編曲・ベース</li>
+          <li>Hug（JAG, 2024）作曲・編曲・ベース</li>
+          <li>劇（CoCoKoKo, 2022）作編曲・トラック・mix</li>
+          <li>虜（CoCoKoKo, 2022）作編曲・トラック・mix</li>
+        </ul>
+        <h2>ベース</h2>
+        <ul>
+          <li>晴天飛行／ぼくらの夕景／夜だけ（35's Town, 2020）ベース・mix</li>
+          <li>twangy／vivid（THE NOBES, 2020）ベース</li>
+        </ul>
+        <h2>リンク</h2>
+        <ul>
+          <li><a href="https://youtube.com/@maeken5747">YouTube</a></li>
+          <li><a href="https://www.instagram.com/maeda_kentarooh">Instagram</a></li>
+          <li><a href="https://lnkpie.com/@maeken">Links</a></li>
+        </ul>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
